@@ -1,0 +1,14 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_url":"mysql://root:@localhost/my_blog",
+        "prod_url":"mysql://root:@localhost/my_blog",
+        "blog_name":"My blog",
+        "blog_sub":"This is my first website for bloging",
+        "number_post":3,
+        "admin_username":"rajib",
+        "admin_password":"rajib@7224",
+        "upload_lac":"D:\\My all program code\\all python code\\python_flask_code\\my_blog\\static"
+    }
+}

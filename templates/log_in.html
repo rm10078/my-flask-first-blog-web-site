@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            background-color: rgb(175, 175, 175);
+        }
+
+        .log_in form {
+            font-family: initial;
+            
+        }
+
+        .log_in form img {
+            margin-top: 3%;
+            margin-left: 42%;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: #4c899c;
+        }
+
+        .log_in form h2 {
+            margin-top: 1%;
+            margin-left: 46%;
+        }
+
+        .log_in form h4 {
+            margin-top: 0%;
+            margin-left: 47%;
+        }
+
+        .log_in form input {
+            margin-top: 0%;
+            margin-left: 44%;
+            padding: 0.5%;
+            border-color: black;
+            border-style: solid;
+            border-radius: 12px;
+            border-width: 5%;
+        }
+
+        
+        
+    </style>
+    
+    <title>sign in</title>
+</head>
+
+<body>
+    <div class="log_in">
+        <form action="/log_in" method="POST" class="form_log">
+            <img src="{{url_for('static',filename='logo_blog.jpg')}}" alt="">
+            <h2>Admin Login</h2>
+            <h4>User Name:</h4>
+            <input type="text" name='username'>
+            <h4>Password:</h4>
+            <input type="password" name='password'>
+            <br><button type="submit" class="btn btn-danger" style="margin-left: 49%; margin-top: 1%;">Sign in</button>
+        </form>
+        <a href=""><h3 style="margin-left: 42%; margin-top: 1%;">Create a new account!</h3></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>

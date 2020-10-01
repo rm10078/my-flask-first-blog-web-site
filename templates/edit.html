@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+Edit page
+{% endblock title %}
+{% block body %}
+<div style="margin-top: 9%;" >
+ <form action="/edit/{{sno}}" method="post" >
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Title:</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Title"value="{{posts.title}}">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Slug:</label>
+            <input type="text" class="form-control" id="slug" name="slug" placeholder="slug-name"value="{{posts.slug}}">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Date:</label>
+            <input type="date" class="form-control" id="date" name="date" placeholder="Date"value="{{posts.date}}">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Image:</label>
+            <input type="text" class="form-control" id="img_file" name="img_file" placeholder="Image Name"value="{{posts.img_file}}">
+          </div>
+        
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Content:</label>
+          <textarea class="form-control" id="content" name="content" rows="3" >{{posts.content}}</textarea>
+        </div>
+
+        <div id="submit_b">
+            <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </div>
+      </form>
+      </div>
+{% endblock body %}

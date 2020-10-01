@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    #div1 {
+      margin-top: 50px;
+    }
+
+    .about_text {
+      margin-top: 50px;
+    }
+
+    #contact_div {
+      margin-top: 60px;
+      width: 700px;
+      position: absolute;
+      left: 25%;
+    }
+
+    #submit_b {
+      margin-left: 45%;
+    }
+
+    .form-group {
+      margin: 30px;
+    }
+
+    #divh1 {
+      background-image: url('https://source.unsplash.com/CfsTZP2dx5Q/250x250');
+      width: 250px;
+      height: 250px;
+      border-style: solid;
+      border-color: black;
+      border-radius: 50%;
+      border-width: 5px;
+      margin-top: 14%;
+      margin-left: 37%;
+    }
+
+    #texthome {
+      text-align: center;
+      color: blue;
+      margin-top: 95px;
+    }
+
+    #title_div {
+      width: 200px;
+      margin-top: 10px;
+      margin-left: 39%;
+
+    }
+
+    #title_text {
+      border-color: gray;
+      color: black;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: rgb(31, 211, 187);
+      border-style: ridge;
+      border-radius: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+    }
+
+    #pera {
+      width: 500px;
+      margin-top: 1%;
+      margin-left: 37%;
+
+    }
+
+    .post {
+      width: 75%;
+      margin-left: 12%;
+    }
+
+    body {
+      background-color: rgb(175, 175, 175);
+    }
+
+    #pos {
+      position: absolute;
+      top: 12%;
+      align-items: center;
+    }
+
+    #pos h1 {
+      justify-items: center;
+    }
+
+    .content_me {
+      text-align: center;
+      margin: 10px;
+      align-content: center;
+      display: flex;
+    }
+
+    .content_me h2 {
+
+      width: 200px;
+      height: 50px;
+      border-color: aqua;
+      border-style: solid;
+    }
+
+    .main {
+      margin-top: 5%;
+
+    }
+
+    .head {
+      width: auto;
+      height: 900px;
+    }
+
+    #next {
+
+      margin-right: auto;
+      margin-left: 76%;
+    }
+  </style>
+
+  <title>{% block title%}
+    {% endblock title%}</title>
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">My Blog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/contact">Contact <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/log_in">Admin </a>
+          </li>
+
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  {%block body%}
+  {%endblock body%}
+
+</body>
+
+</html>

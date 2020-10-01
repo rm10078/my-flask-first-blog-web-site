@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+Admin
+{% endblock title %}
+{% block body %}
+<div class="card mb-3" style="margin-top: 8%;margin-left: 0%;">
+    <img src="{{url_for('static',filename='admin.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Admin</h5>
+      <p class="card-text">Wellcome to admin page</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+  </div>
+  <a class="btn btn-primary btn-lg"  href="/edit/0" role="button">Add new post</a>
+  <h3>uplode file here</h3>
+  <form action="/upload" methods="POST" >
+  <input type="file" name="file1" id="file">
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Sno</th>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Dlete</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+      <tr>
+        
+        <td>{{post.sno}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.date}}</td>
+        <td><a class="btn btn-primary btn-lg"  href="/edit/{{post.sno}}" role="button">Edit</a></td>
+        <td><a class="btn btn-primary btn-lg"  href="/delete/{{post.sno}}" role="button">Dlete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a class="btn btn-primary btn-lg"  href="/logout" role="button">Logout</a>
+{% endblock body %}

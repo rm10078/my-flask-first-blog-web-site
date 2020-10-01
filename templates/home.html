@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+home page
+{% endblock title %}
+{% block body %}
+
+<div >
+  <img id="divh1" src="{{url_for('static',filename='logo_blog.jpg')}}" alt="">
+  
+</div>
+<div id="title_div">
+  <h2 id="title_text">{{ params['blog_name']}}</h2>
+</div>
+<div id="pera">
+  <p>{{ params['blog_sub']}}</p>
+</div>
+{% for post  in posts %}
+
+<div class="post">
+<div class="jumbotron">
+  <h1 class="display-4">{{post.title}}</h1>
+  <p class="lead">{{post.content[0:43]}}</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="/post/{{post.slug}}" role="button">Learn more</a>
+</div>
+</div>
+{% endfor %}
+<div id="next">
+<a class="btn btn-primary btn-lg"  href="/next" role="button">Next Post</a>
+</div>
+{% endblock body %}
